@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - WorkIndia</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+        <!-- Draken Logo and Title -->
+        <div class="header">
+            <img src="draken.png.webp" alt="Draken Logo" class="logo">
+            <h1 class="title">Profile</h1>
+        </div>
+
+        <!-- Profile Form -->
+        <div class="profile-box">
+            <h2>Complete Your Profile</h2>
+            <form action="#">
+                <div class="input-group">
+                    <label for="tenth">10th Grade Percentage/CGPA</label>
+                    <input type="text" id="tenth" placeholder="Enter your 10th percentage/CGPA" required>
+                </div>
+                <div class="input-group">
+                    <label for="twelfth">12th Grade Percentage/CGPA</label>
+                    <input type="text" id="twelfth" placeholder="Enter your 12th percentage/CGPA" required>
+                </div>
+                <div class="input-group">
+                    <label for="skills">Skills</label>
+                    <input type="text" id="skills" placeholder="Enter your skills" required>
+                </div>
+                <div class="input-group">
+                    <label for="college">College</label>
+                    <input type="text" id="college" placeholder="Enter your college name" required>
+                </div>
+                <div class="input-group">
+                    <label for="degree">Degree</label>
+                    <input type="text" id="degree" placeholder="Enter your degree" required>
+                </div>
+                <div class="input-group">
+                    <label for="aim">Your Aim on this Platform</label>
+                    <textarea id="aim" placeholder="What is your aim on this website?" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="reason">Reason for Joining Freelancing</label>
+                    <textarea id="reason" placeholder="Why did you join freelancing?" required></textarea>
+                </div>
+                <button type="submit" class="profile-btn">Submit Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Particle.js Initialization -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 150,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": ["#ffa500", "#ff6347", "#ffcc00", "#ff4500"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 0.8,
+                        "opacity_min": 0.2,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 8,
+                        "size_min": 0.1,
+                        "sync": true
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 150,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+</body>
+</html>

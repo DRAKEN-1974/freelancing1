@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Freelancer Portal</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- Particle Effect -->
+</head>
+<body>
+
+    <div id="particles-js"></div> <!-- Particle Background -->
+    
+    <div class="login-container">
+        <!-- Header Section with Logo -->
+        <header class="header">
+            <img src="draken.png.webp" alt="Draken Logo" class="logo">
+            <h1 class="title">Login Page</h1>
+        </header>
+
+        <div class="login-box">
+            <h2>Freelancer Login</h2>
+            <form action="#" method="POST">
+                <!-- Email -->
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="login-btn">Log In</button>
+
+                <!-- Forgot Password -->
+                <p class="forgot-password"><a href="#">Forgot your password?</a></p>
+
+                <!-- Sign Up Link -->
+                <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Initialize Particles.js -->
+    <script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 150,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": { "value": "#ff6347" },  // Bright color for particles
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true
+            },
+            "size": {
+                "value": 4,
+                "random": true
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff4500",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 5,
+                "direction": "none"
+            }
+        },
+        "retina_detect": true
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ff8c00;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Particle.js background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Profile Container */
+.profile-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Header with Draken logo */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header .logo {
+    max-width: 150px;
+    animation: logoBounce 2s infinite ease-in-out;
+}
+
+.header .title {
+    font-size: 3em;
+    color: #ff4500;
+    margin-top: 15px;
+    animation: fadeIn 1.5s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Logo Bounce Animation */
+@keyframes logoBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Profile Box */
+.profile-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #ff4500;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+    background-color: #fff;
+}
+
+/* Submit Button */
+.profile-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.profile-btn:hover {
+    background-color: #ffa500;
+    transform: scale(1.05);
+}
+
+/* Keyframes for Text Bounce */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

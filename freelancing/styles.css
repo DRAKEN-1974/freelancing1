@@ -1,0 +1,545 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dark Mode Toggle */
+.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+.dark-mode .cta-btn,
+.dark-mode .linkedin-btn,
+.dark-mode .instagram-btn,
+.dark-mode .portfolio-btn {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: #ff6347;
+    z-index: 9999;
+    transition: width 0.25s ease; /* Smooth transition for the scroll progress */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Particles.js Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Header Section with Particle and Gradient Background */
+.site-header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #ff6b6b, #ffcc00, #1e90ff, #ffa500);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.site-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Logo */
+.site-header img {
+    max-width: 160px; /* Slightly increased logo size */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    animation: logoBounce 2s infinite ease-in-out;
+}
+
+.site-header img:hover {
+    transform: scale(1.2) rotate(5deg); /* Zoom and rotate for more interaction */
+}
+
+/* Header Title */
+.site-header h1 {
+    font-size: 5em; /* Increased text size for header */
+    color: white;
+    animation: fadeIn 1.5s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Spaced out the title for readability */
+}
+
+/* Blinking Cursor and Typed Text */
+.header-lines {
+    font-size: 2em; /* Increased size for the blinking text */
+    color: #f5f5f5;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.blinking-cursor {
+    font-size: 2.5em; /* Made blinking cursor more prominent */
+    font-weight: bold;
+    color: white;
+    animation: blink 1s infinite;
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 20px 40px; /* Increased padding */
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.4em; /* Increased button size */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 2;
+    margin-top: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+}
+
+.cta-btn:hover {
+    background-color: #ffa500;
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(255, 165, 0, 0.7); /* Increased shadow and scaling */
+}
+
+/* Ripple Effect on Button */
+.cta-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.cta-btn:active::after {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 1;
+    transition: transform 0.5s, opacity 1s;
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Introduction Section */
+.intro {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffe066;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.intro h2 {
+    font-size: 3.5em; /* Increased heading size */
+    margin-bottom: 20px;
+    color: #ff4500;
+    animation: fadeIn 1s ease-out;
+}
+
+.intro p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Hover Effect on Intro Text */
+.intro h2:hover, .intro p:hover {
+    color: #ff6347;
+    transition: color 0.3s ease;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 20px;
+    background-color: #fffacd;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 3.5em;
+    margin-bottom: 40px;
+    color: #ff4500;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.service-item {
+    background-color: #f0f8ff;
+    padding: 30px;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.5s ease;
+    transform: perspective(500px) rotateY(0deg); /* 3D Effect */
+}
+
+.service-item:hover {
+    transform: translateY(-20px) rotate(5deg); /* Lift and rotate */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff4500;
+}
+
+.service-item p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Team Section */
+.team {
+    padding: 100px 20px;
+    background-color: #ffebcd;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #ff4500;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.team-member {
+    background-color: #ffe4b2;
+    padding: 40px;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ff6347;
+}
+
+.team-member p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.team-links {
+    margin-top: 20px;
+}
+
+.team-links .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.team-links .btn i {
+    margin-right: 8px;
+}
+
+.linkedin-btn {
+    background-color: #1e90ff;
+}
+
+.portfolio-btn {
+    background-color: #ffa500;
+}
+
+/* Instagram button with gradient */
+.instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.team-links .btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-item p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-item h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Call to Action Section */
+.cta {
+    padding: 80px 20px;
+    background-color: #ff4500;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.cta h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta a {
+    background-color: #1e90ff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #ffa500;
+    transform: scale(1.2);
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.8);
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #ffa07a;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff4500;
+}
+
+.footer-content p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    transition: font-size 0.3s ease;
+}
+
+.footer-content p:hover {
+    font-size: 1.3em;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #333;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 3.5em;
+    }
+
+    .cta-btn {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+
+    .intro h2,
+    .services h2 {
+        font-size: 2.5em;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header h1 {
+        font-size: 2.5em;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .intro h2,
+    .services h2 {
+        font-size: 2em;
+    }
+}
